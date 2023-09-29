@@ -16,11 +16,11 @@ public class Launcher {
         while(true){
             System.out.println("Input a message, we will sent it for you (q for quit)");
             String rponse = scan.nextLine();
-            if(scan.equals("q")){
+            if(rponse.equals("q")){
                 System.out.println("Goodbye.");
                 System.exit(0);
             }
-            template.convertAndSend((scan));
+            template.convertAndSend((rponse));
             System.out.println("Message sent.");
         }
     }
